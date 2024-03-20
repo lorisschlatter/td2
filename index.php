@@ -30,10 +30,10 @@
     echo "L'étudiant a eu une note de ".end($notes)." en ".end($matieres);
 
     $results = array_combine($matieres,$notes);
-    $tempSwitchFirst = $results['algorithmie'];
-    $tempSwitchSecond = $results ['marketing'];
 
-    $results['algorithmie'] = $tempSwitchSecond;
+    $tempSwitchFirst = $results['algorithmie'];
+
+    $results['algorithmie'] = $results['marketing'];
     $results['marketing'] = $tempSwitchFirst;
 
     $marks = [
