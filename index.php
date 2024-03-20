@@ -27,6 +27,8 @@
     $notes = [15,13,8,10,17];
     $matieres = ["html/css","algorithmie","anglais","marketing","ui/ux"];
 
+    echo "L'étudiant a eu une note de ".end($notes)." en ".end($matieres);
+
     $results = array_combine($matieres,$notes);
     $tempSwitchFirst = $results['algorithmie'];
     $tempSwitchSecond = $results ['marketing'];
@@ -42,11 +44,15 @@
     ];
 
     $count = 1;
-
-    foreach ($marks['étudiant2'] as $note){
-        echo "Note $count : $note <br>";
-        $count += 1;
+    
+    foreach ($marks as $etudiant => $notes) {
+        echo "<br>Notes de $etudiant : <br>";
+        foreach ($notes as $count => $note) {
+            echo "Note ".($count+1)." : $note <br>";
+        }
+        echo "<br>";
     }
+    
 
     $myType = "Je suis une chaîne de caractères";
 
