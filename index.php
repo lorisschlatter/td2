@@ -32,7 +32,6 @@
     $results = array_combine($matieres,$notes);
 
     $tempSwitchFirst = $results['algorithmie'];
-
     $results['algorithmie'] = $results['marketing'];
     $results['marketing'] = $tempSwitchFirst;
 
